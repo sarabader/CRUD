@@ -12,10 +12,10 @@ function App() {
   return (
     <div className="App">
       <h1>ddd</h1>
-      <Create></Create>
-      <Read></Read>
-      <Update></Update>
-  {/* <Rou></Rou> */}
+      {/* <Create></Create> */}
+      {/* <Read></Read> */}
+      {/* <Update></Update> */}
+  <Rou></Rou>
   {/* <Read></Read> */}
 
 
