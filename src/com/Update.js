@@ -18,11 +18,12 @@ function Update() {
                 fName,
                 lName,
                }).then(res => {
-                console.log(res);
+                console.log(res.id);
                 navigate("/Read");
                }).catch(err => {
                 console.log(err);
                })
+              }
         return(
         <div>
           <input placeholder="firstName" onChange={(e) => {
@@ -35,6 +36,6 @@ function Update() {
     </div>
   )
 }
-}
+
 
 export default Update;

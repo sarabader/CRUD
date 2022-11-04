@@ -25,9 +25,9 @@ function Read() {
 
   return (
     <div>
-        {state.map((items,index) => {
+        {state.map((items, index) => {
         return(
-        <div key={index}>
+        <div key ={index}>
           <p>First Name: {items.fName}</p>
           <p>Last Name: {items.lName}</p>
           <button onClick={() => {onDelete(items.id)}}>Delete</button>
