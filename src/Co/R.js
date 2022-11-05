@@ -2,19 +2,19 @@ import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import {Link} from 'react-router-dom'
 
-function Read() {
+function R() {
   const [state, setstate] = useState([])
   useEffect (() => {
-    axios.get("https://6362426866f75177ea2a9c61.mockapi.io/todolist").then((res)=>{
+    axios.get("https://rickandmortyapi.com/api/character").then((res)=>{
       // console.log(res.data)
-      setstate(res.data)
+      setstate(res.data.resilts)
     })
   }, [])
 
   //Delete
      const onDelete = (id) => {
        console.log(id)
-      axios.delete(`https://6362426866f75177ea2a9c61.mockapi.io/todolist/${id}`).then (res => {
+      axios.delete(`https://rickandmortyapi.com/api/character/${id}`).then (res => {
        console.log(res)
        setstate(state.filter(del =>{
         return del.id != id
@@ -28,14 +28,11 @@ function Read() {
         {state.map((items, index) => {
         return(
         <div key ={index}>
-          <p>First Name: {items.fName}</p>
-          <p>Last Name: {items.lName}</p>
+          <p> ID: {items.id}</p>
+          <img src={items.image}></img>
           <button onClick={() => {onDelete(items.id)}}>Delete</button>
-          <Link to ="/Update">
+          <Link to ="/Ud">
             <button onClick={()=>localStorage.setItem("id",items.id)}>update</button>
-          </Link>
-          <Link to ="/Im">
-            <button >More</button>
           </Link>
           </div>
         )
@@ -44,4 +41,4 @@ function Read() {
   )
 }
 
-export default Read
+export default R;

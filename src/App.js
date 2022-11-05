@@ -1,25 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
-import Rou from './com/Rou';
-import Read from './com/Read';
 import { Routes, Route } from "react-router-dom"
-import Create from './com/Create';
-import Update from './com/Update';
+import {BrowserRouter} from 'react-router-dom'
+
+import Rot from './Co/Rot';
+import C from './Co/C';
+import More from './Co/More';
+import Rou from './com/Rou';
+
+
+
 
 
 
 function App() {
   return (
     <div className="App">
-      <h1>ddd</h1>
-      {/* <Create></Create> */}
-      {/* <Read></Read> */}
-      {/* <Update></Update> */}
-  <Rou></Rou>
-  {/* <Read></Read> */}
-
-
-
+      <h1>CRUD</h1>
+<Rou></Rou>
+{/* <Rot></Rot> */}
     </div>
   );
 }

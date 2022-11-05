@@ -4,17 +4,23 @@ import App from '../App'
 import Create from './Create';
 import Read from './Read';
 import Update from './Update';
+import Im from './Im';
+
+
+
 
 
 function Rou() {
   return (
     <div>
         <Routes>
-        <Route  path='/Create' element ={<Create/>}></Route>
+        <Route exact path='/' element ={<Create/>}></Route>
         <Route  path='Read' element = {<Read/>}></Route>
         <Route  path='Update' element = {<Update/>}></Route>
+        <Route  path='Im' element = {<Im/>}></Route>
 
-        </Routes>
+</Routes>
+
     </div>
   )
 }

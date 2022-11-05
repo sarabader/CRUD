@@ -6,6 +6,11 @@
   height: 40vmin;
   pointer-events: none;
 }
+.b{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  text-align: center;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
